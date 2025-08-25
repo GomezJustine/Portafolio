@@ -15,3 +15,32 @@ h1 {
     color: #333;
     line-height: 1.6;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d0e8ff;
+    padding: 1rem 2rem;
+}
+
+img {
+    width: 4em;
+    height: 4rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem
+}
+
+.menu li a {
+    color: #1A202C;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #A9D4FF;
+    text-decoration: underline;
+}
