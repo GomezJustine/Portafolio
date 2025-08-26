@@ -80,10 +80,11 @@ img {
 }
 
 /* Estilo about */
-#about {
+#about,
+#skills {
     padding: 2rem;
     background-color: #FFF;
-    MARGIN: 1rem o;
+    margin: 1rem 0;
     border-radius: 2rem;
 
 }
@@ -109,10 +110,17 @@ img {
     text-align: justify;;
 }
 
-#about h2 {
+#about h2,
+#skills h2 {
     margin-bottom: 20px;
     font-size: 2rem;
     width: 100%;
     text-align: center;
     flex-basis: 100%;
+}
+
+/* Estilo seccion skills */
+
+#skills ul {
+    list-style-type: disc;
 }
