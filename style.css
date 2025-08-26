@@ -44,3 +44,37 @@ img {
     color: #A9D4FF;
     text-decoration: underline;
 }
+
+
+/* Header responsive */
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 4px;
+        padding: 10px;
+
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Mostrar menú toggle solo en movil */
+
+.menu-toggle {
+    display: none;
+    color: #333;
+    font-size: 1.5rem;
+}
