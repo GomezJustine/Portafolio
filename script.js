@@ -34,3 +34,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     alert('Formulario enviado correctamente');
     this.reset();
 });
+
+// Modo oscuro
+document.getElementById('toggle-theme').addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+});

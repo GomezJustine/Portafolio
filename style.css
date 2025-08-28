@@ -221,6 +221,7 @@ form input, form textarea {
 }
 form button {
     margin-top: 10px;
+    font-family: poppins;
     padding: 10px 20px;
     background-color: #5aa9e6;
     color: white;
@@ -273,7 +274,7 @@ footer .social-links {
     text-align: center;
 }
 
-.btn-cv {
+.btn-cv{
     display: inline-block;
     padding: 10px 20px;
     background-color: #5aa9e6;
@@ -284,5 +285,346 @@ footer .social-links {
 }
 .btn-cv:hover {
     background-color: #49b0ffd3;
+    transform: scale(1.05);
+}
+
+/* Estilo boton modo oscuro */
+
+#toggle-theme {
+    background-color: #5aa9e6;
+    color: white;
+    font-family: poppins;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#toggle-theme:hover {
+    background-color: #49b0ffd3;
+    transform: scale(1.05);
+}
+
+/* Modo oscuro */
+:root {
+    --bg-color: #fafafa;
+    --text-color: #555;
+    --card-bg: #FFF;
+    --header-bg: #d0e8ff;
+    --accent-color: #5aa9e6;
+    --accent-hover: #49b0ffd3;
+    --border-color: #ddd;
+    --skill-bar-bg: #eee;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --profile-border: #fb9b9b;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --header-bg: #0d1b2a;
+    --accent-color: #90caf9;
+    --accent-hover: #bbdefb;
+    --border-color: #333;
+    --skill-bar-bg: #2d2d2d;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --profile-border: #90caf9;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: medium;
+    color: var(--text-color);
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg);
+    padding: 1rem 2rem;
+}
+
+img {
+    width: 4em;
+    height: 4rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem
+}
+
+.menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Header responsive */
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--card-bg);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 4px;
+        padding: 10px;
+        box-shadow: 0 2px 5px var(--shadow);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Mostrar menú toggle solo en movil */
+.menu-toggle {
+    display: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+/* Estilo about */
+#about,
+#skills {
+    padding: 2rem;
+    background-color: var(--card-bg);
+    margin: 1rem 0;
+    border-radius: 2rem;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+/* Estilo fot-perfil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+    border: 4px solid var(--profile-border);
+    object-fit: cover;
+}
+
+.perfil {
+    display: flex;
+    align-items: flex-start;
+}
+
+.perfil-info {
+    flex: 1;
+    text-align: justify;
+}
+
+#about h2,
+#skills h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    flex-basis: 100%;
+    color: var(--text-color);
+}
+
+/* Estilo seccion skills - Modelo Barras */
+#skills ul {
+    list-style-type: disc;
+    color: var(--text-color);
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background-color: var(--skill-bar-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    transition: width 2s;
+}
+
+.progress.html {
+    width: 90%;
+}
+
+.progress.css {
+    width: 80%;
+}
+
+.progress.js {
+    width: 70%;
+}
+
+/* Estilo cards proyectos*/
+#projects {
+    padding: 2rem;
+    background-color: var(--card-bg);
+    margin: 1rem 0;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+#projects h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    flex-basis: 100%;
+    color: var(--text-color);
+}
+
+.project-card {
+    background-color: var(--skill-bar-bg);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow);
+    color: var(--text-color);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.project-card a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Estilo formulario de contacto */
+#contact, .cv-pdf {
+    padding: 2rem;
+    background-color: var(--card-bg);
+    margin: 1rem 0;
+    border-radius: 2rem;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+form button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Estilo footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg);
+    position: relative;
+    bottom: 0;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.logo-footer {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+footer p,
+footer .social-links {
+    flex: 1; 
+    color: var(--text-color);
+}
+
+.social-links img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo boton descargar CV */
+.cv-pdf {
+    text-align: center;
+}
+
+.btn-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.btn-cv:hover {
+    background-color: var(--accent-hover);
     transform: scale(1.05);
 }
