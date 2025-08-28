@@ -199,7 +199,7 @@ img {
 
 /* Estilo formulario de contacto */
 
-#contact {
+#contact, .cv-pdf{
     padding: 2rem;
     background-color: #FFF;
     margin: 1rem 0;
@@ -266,4 +266,23 @@ footer .social-links {
 
 .social-links img:hover {
     transform: scale(1.2);
+}
+
+/* Estilo boton descargar CV */
+.cv-pdf {
+    text-align: center;
+}
+
+.btn-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5aa9e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.btn-cv:hover {
+    background-color: #49b0ffd3;
+    transform: scale(1.05);
 }
