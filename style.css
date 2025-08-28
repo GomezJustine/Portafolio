@@ -196,3 +196,38 @@ img {
     text-decoration: underline;
 }
 
+
+/* Estilo formulario de contacto */
+
+#contact {
+    padding: 2rem;
+    background-color: #FFF;
+    margin: 1rem 0;
+    border-radius: 2rem;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    border-radius: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5aa9e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+form button:hover {
+    background-color: #49b0ffd3;
+}
