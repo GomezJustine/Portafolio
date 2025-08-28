@@ -6,22 +6,23 @@
     <title>Portafolio Justine Bravo Gomez</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="img/favicon-j.png">
 </head>
 <body>
-    <header>
-        <div class="menu-toggle">&#9776;</div>
+    <header role="banner">
+        <div class="menu-toggle" aria-label="Abrir menú de navegación" tabindex="0" role="button">&#9776;</div>
             <div class="logo">
                 <img src="img/logo.png" alt="Logo Justine">
             </div>
         
-        <button id="toggle-theme">Modo Oscuro</button>
+        <button id="toggle-theme" aria-pressed="false" aria-label="Activar modo oscuro">Modo Oscuro</button>
 
-            <nav>
+            <nav role="navigation" aria-label="Menú principal">
                 <ul class="menu">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#about" aria-label="Ir a la sección Sobre Mi">About</a></li>
+                    <li><a href="#skills" aria-label="Ir a la sección Habilidades">Skills</a></li>
+                    <li><a href="#projects" aria-label="Ir a la sección Proyectos">Proyectos</a></li>
+                    <li><a href="#contact" aria-label="Ir a la sección Contacto">Contacto</a></li>
                 </ul>
             </nav>
     </header>
@@ -29,8 +30,8 @@
     <main>
         <h1>Actividad Git-Github Portafolio Justine Bravo Gomez</h1>
 
-        <section id="about">
-          <h2>Sobre Mi</h2>
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">Sobre Mi</h2>
             <div class="perfil">
                 <img src="img/fotoperfil.png" alt="Foto perfil Justine" class="profile-pic">
                 <div class="perfil-info">
@@ -52,76 +53,76 @@
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Habilidades</h2>
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Habilidades</h2>
             <p>Estas son algunas de las tecnologías que manejo y aplico en mis proyectos web:</p>
         
                 <div class="skill">
                     <span><strong>HTML</strong> – Estructura semántica, etiquetas accesibles y organización clara del contenido.</span>
-                    <div class="progress-bar">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de HTML">
                     <div class="progress html"></div>
                     </div>
                 </div>
 
                 <div class="skill">
                     <span><strong>CSS</strong> – Diseño responsivo con Flexbox y Grid, uso de variables, y enfoque en contraste y armonía visual.</span>
-                    <div class="progress-bar">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de CSS">
                     <div class="progress css"></div>
                     </div>
                 </div>
 
                 <div class="skill">
                     <span><strong>JavaScript</strong> – Interacción dinámica con el DOM, manejo de eventos, consumo de APIs y depuración con consola.</span>
-                    <div class="progress-bar">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel de JavaScript">
                     <div class="progress js"></div>
                     </div>
                 </div>
         </section>
 
-        <section id="projects">
-            <h2 class="h2-projects">Proyectos</h2>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 class="h2-projects" id="projects-heading">Proyectos</h2>
             <div class="project-card">
                 <h3>Gestión de Inventarios</h3>
                 <p>Un proyecto de gestión de inventarios desarrollado para la clase de Lenguajes de Programación.</p>
-                <a href="https://github.com/GomezJustine/GestionInventarios" target="_blank">Ver repositorio</a>
+                <a href="https://github.com/GomezJustine/GestionInventarios" target="_blank" aria-label="Ver repositorio de Gestión de Inventarios en GitHub">Ver repositorio</a>
             </div>
             <div class="project-card">
                 <h3>Veterinaria Web</h3>
                 <p>Un proyecto de gestión integral para una clínica veterinaria desarrollado para la clase de Programación Orientada a Objetos.</p>
-                <a href="https://github.com/GomezJustine/VeterinariaWeb" target="_blank">Ver repositorio</a>
+                <a href="https://github.com/GomezJustine/VeterinariaWeb" target="_blank" aria-label="Ver repositorio de Veterinaria Web en GitHub">Ver repositorio</a>
             </div>
         </section>
 
-        <section class="cv-pdf">
-            <h2><span>📄</span> CV de Justine Bravo Gómez</h2>
+        <section class="cv-pdf" aria-labelledby="cv-heading">
+            <h2 id="cv-heading"><span>📄</span> CV de Justine Bravo Gómez</h2>
             <p>Descarga mi hoja de vida en formato PDF y conoce más sobre mi experiencia, habilidades y proyectos.</p>
-            <a href="img/cv-justine.pdf" download class="btn-cv">📥 Descargar CV</a>
+            <a href="img/cv-justine.pdf" download class="btn-cv" aria-label="Descargar CV de Justine Bravo Gómez en PDF">📥 Descargar CV</a>
         </section>
 
-        <section id="contact">
-            <h2>Contacto</h2>
-            <form id="contact-form">
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contacto</h2>
+            <form id="contact-form" aria-label="Formulario de contacto">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required aria-required="true">
 
                 <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required aria-required="true">
 
                 <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" aria-label="Enviar mensaje de contacto">Enviar</button>
             </form>
         </section>
 
-        <footer>
+        <footer role="contentinfo">
             <img src="img/logo.png" alt="Logo Justine" class="logo-footer">
 
             <p>&copy; 2025 Justine Bravo Gomez. Todos los derechos reservados.</p>
             <div class="social-links">
                 <h3>Links de Interes</h3>
-                <a href="https://www.linkedin.com/in/justine-bravo-gomez/" target="_blank"><img src="img/linkedin_3992560.png" alt="linkedin"></a>
-                <a href="https://github.com/GomezJustine" target="_blank"><img src="img/github_733609.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/justine-bravo-gomez/" target="_blank" aria-label="Perfil de LinkedIn de Justine Bravo Gomez"><img src="img/linkedin_3992560.png" alt="linkedin"></a>
+                <a href="https://github.com/GomezJustine" target="_blank" aria-label="Perfil de GitHub de Justine Bravo Gomez"><img src="img/github_733609.png" alt="GitHub"></a>
             </div>
         </footer>
         
