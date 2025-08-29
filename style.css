@@ -294,8 +294,9 @@ footer .social-links {
     background-color: #5aa9e6;
     color: white;
     font-family: poppins;
+    font-size: 11px;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     cursor: pointer;
     border-radius: 8px;
 }
